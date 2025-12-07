@@ -11,22 +11,15 @@
 </head>
 
 <body>
-
-    <!-- Header fixo com logo centralizada e botão -->
     <div class="header-logo">
-        <!-- Botão para abrir/fechar menu -->
         <button class="btn btn-primary menu-button" id="toggleMenu">☰</button>
-
-        <!-- Logo centralizada -->
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#home">
             <img src="assets/img/logo.png" alt="Logo" width="180" height="40" class="d-inline-block align-text-top">
         </a>
     </div>
-
-    <!-- Menu lateral -->
     <div class="sidebar" id="sidebarMenu">
         <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#home">Início</a></li>
             <li class="nav-item">
                 <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
                     href="#submenu1" role="button" aria-expanded="false" aria-controls="submenu1">
@@ -35,8 +28,8 @@
                 </a>
                 <div class="collapse" id="submenu1">
                     <ul class="nav flex-column ms-3">
-                        <li class="nav-item"><a class="nav-link" href="#">Delmar Analytics</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Delmar Controls</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#segmentos">Delmar Analytics</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#segmentos">Delmar Controls</a></li>
                     </ul>
                 </div>
             </li>
@@ -48,28 +41,86 @@
                 </a>
                 <div class="collapse" id="submenu2">
                     <ul class="nav flex-column ms-3">
-                        <li class="nav-item"><a class="nav-link" href="#">Opção 1</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Opção 2</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Opção 3</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#produtos">Opção 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#produtos">Opção 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#produtos">Opção 3</a></li>
                     </ul>
                 </div>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Serviços</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+            <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="#clientes">Clientes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
         </ul>
     </div>
+    <section id="home">
+        <div class="content container mt-4" id="mainContent">
+            <h1>Bem-vindo!</h1>
+            <p>TESTANDO 1 3 2 3 3 4 4 1 312 412 42 4 124 12412 4 .</p>
+            <p style="height:1000px;">(LOREM IPSUM JOSÉÉÉÉ)</p>
+        </div>
+    </section>
+    <section id="segmentos"></section>
+    <section id="produtos"></section>
+    <section id="servicos"></section>
+    <section id="sobre"></section>
+    <section id="clientes"></section>
+    <section></section>
+    <section id="contato" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h2 class="card-title text-center mb-4">Contato</h2>
+                            <form id="form-contato" novalidate>
+                                <div class="mb-3">
+                                    <label for="nome" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome"
+                                        required>
+                                    <div class="invalid-feedback">Por favor, insira seu nome.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="telefone" class="form-label">Telefone/Celular</label>
+                                    <input type="tel" class="form-control" id="telefone" name="telefone"
+                                        placeholder="(99) 99999-9999" required>
+                                    <div class="invalid-feedback">Digite um telefone válido com DDD.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="seuemail@exemplo.com" required>
+                                    <div class="invalid-feedback">Digite um e-mail válido.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="empresa" class="form-label">Nome da empresa</label>
+                                    <input type="text" class="form-control" id="empresa" name="empresa"
+                                        placeholder="Sua empresa">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="mensagem" class="form-label">Mensagem</label>
+                                    <textarea class="form-control" id="mensagem" name="mensagem" rows="5"
+                                        placeholder="Escreva sua mensagem" required></textarea>
+                                    <div class="invalid-feedback">Por favor, escreva sua mensagem.</div>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Conteúdo principal -->
-    <div class="content container mt-4" id="mainContent">
-        <h1>Bem-vindo!</h1>
-        <p>TESTANDO 1 3 2 3 3 4 4 1 312 412 42 4 124 12412 4 .</p>
-        <p style="height:1000px;">(LOREM IPSUM JOSÉÉÉÉ)</p>
-    </div>
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripts/script.js"></script>
-    </script>
+
 </body>
 
 </html>
