@@ -1,0 +1,75 @@
+      .header-divider {
+        height: 1rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      /* Header fixo na rolagem */
+      .header-logo {
+        height: 70px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* centraliza a logo */
+        z-index: 1030;
+      }
+
+      /* Botão alinhado para fazer o off canvas do bootstrap à esquerda no header */
+      .menu-button {
+        position: absolute;
+        left: 1rem;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        top: 70px;
+        /* abaixo do header */
+        left: -200px;
+        /* escondido inicialmente */
+        background-color: #f8f9fa;
+        border-right: 1px solid #ddd;
+        padding: 1rem;
+        transition: left 0.3s ease;
+        z-index: 1020;
+      }
+
+      /* Sidebar visível */
+      .sidebar.show {
+        left: 0;
+      }
+
+      /* Conteúdo principal */
+      .content {
+        transition: margin-left 0.3s ease;
+        margin-left: 0;
+        padding-top: 70px;
+        /* espaço para header */
+      }
+
+      /* Quando o menu está aberto, empurra o conteúdo */
+      .content.shift {
+        margin-left: 200px;
+      }
+
+
+    /* Chevron padrão */
+    .nav-link .bi {
+      transition: transform 0.3s ease;
+      float: right;
+    }
+
+    /* Chevron rotaciona quando o submenu está aberto */
+    .nav-link[aria-expanded="true"] .bi {
+      transform: rotate(180deg);
+    }
