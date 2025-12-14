@@ -78,3 +78,9 @@
         height: 150px;
         margin-bottom: 15px;
       }
+      .alinhar-verticalmente {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+      }
