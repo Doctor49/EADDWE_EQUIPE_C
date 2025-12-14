@@ -8,45 +8,10 @@ toggleBtn.addEventListener('click', () => {
   content.classList.toggle('shift');
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Produto / Serviço - Carrossel com produtos e imagens
-const carousel = document.getElementById('carouselProdutos');
-const lista = document.querySelectorAll('#lista-produtos .list-group-item');
-
-// Função para atualizar cores
-function atualizarLista(index) {
-  lista.forEach((item, i) => {
-    if (i === index) {
-      item.classList.add('active', 'bg-primary', 'text-white');
-    } else {
-      item.classList.remove('active', 'bg-primary', 'text-white');
-    }
-  });
-}
-
-// Inicializa com o primeiro produto
-atualizarLista(0);
-
-// Evento do carrossel
-carousel.addEventListener('slid.bs.carousel', function (event) {
-  const index = event.to; // índice do slide ativo
-  atualizarLista(index);
-});
 // Área para cuidar do contato
   // Área para cuidar do contato
   // Máscara para telefone/celular com DDD
+  //Validador de email
     const telefoneInput = document.getElementById("telefone");
     telefoneInput.addEventListener("input", function (e) {
       let value = e.target.value.replace(/\D/g, ""); // remove não numéricos
@@ -81,6 +46,7 @@ carousel.addEventListener('slid.bs.carousel', function (event) {
           event.stopPropagation();
           telefoneInput.classList.add("is-invalid");
         }
+        alert("Mensagem enviada com sucesso!");
         form.classList.add('was-validated');
       }, false);
     })();
